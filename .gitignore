@@ -44,3 +44,27 @@ packages/
 /[Aa]ssets/TextMesh Pro/
 
 /[Aa]ssets/AssetStoreTools*
+
+# Large Asset Store packages - download individually from Asset Store
+/[Aa]ssets/ADG_Textures/
+/[Aa]ssets/ADG_Textures.meta
+/[Aa]ssets/Dark Wave Paint/
+/[Aa]ssets/Dark Wave Paint.meta
+/[Aa]ssets/DuNguyn/
+/[Aa]ssets/DuNguyn.meta
+/[Aa]ssets/Fantasy Skybox FREE/
+/[Aa]ssets/Fantasy Skybox FREE.meta
+/[Aa]ssets/Glowing Rifts/
+/[Aa]ssets/Glowing Rifts.meta
+/[Aa]ssets/Proxy Games/
+/[Aa]ssets/Proxy Games.meta
+/[Aa]ssets/TerrainTexturesPackFree/
+/[Aa]ssets/TerrainTexturesPackFree.meta
+/[Aa]ssets/TreePackVol.1/
+/[Aa]ssets/TreePackVol.1.meta
+/[Aa]ssets/Wooden_Canopy/
+/[Aa]ssets/Wooden_Canopy.meta
+/[Aa]ssets/_TerrainAutoUpgrade/
+/[Aa]ssets/_TerrainAutoUpgrade.meta
+/[Aa]ssets/Scenes/Acronym Studio - Wooden Houses Free/
+/[Aa]ssets/Scenes/Acronym Studio - Wooden Houses Free.meta
