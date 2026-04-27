@@ -3,11 +3,12 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public enum GameState { Idle, Tutorial, Challenge }
+    public enum GameState { Idle, Tutorial, Challenge, FreeBuild }
     public GameState currentState = GameState.Idle;
 
     public TutorialController tutorialController;
     public AssemblyManager assemblyManager;
+    public FreeBuildManager freeBuildManager;
 
     void Awake() => Instance = this;
 
@@ -23,8 +24,17 @@ public class GameManager : MonoBehaviour
         assemblyManager.BeginChallenge();
     }
 
+    public void StartFreeBuild()
+    {
+        currentState = GameState.FreeBuild;
+        freeBuildManager.BeginFreeBuild();
+    }
+
     public void ReturnToIdle()
     {
+        if (currentState == GameState.FreeBuild)
+            freeBuildManager.StopFreeBuild();
+
         currentState = GameState.Idle;
         assemblyManager.ResetAll();
     }

@@ -8,6 +8,9 @@ public class TableUI : MonoBehaviour
     public void OnChallengePressed()
         => GameManager.Instance.StartChallenge();
 
+    public void OnFreeBuildPressed()
+        => GameManager.Instance.StartFreeBuild();
+
     public void OnResetPressed()
         => GameManager.Instance.ReturnToIdle();
 }
