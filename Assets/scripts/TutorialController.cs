@@ -84,6 +84,8 @@ public class TutorialController : MonoBehaviour
         }
 
         instructionUI.ShowComplete();
+        yield return new WaitForSeconds(2.5f);
+        GameManager.Instance.StartShooting();
     }
 
     IEnumerator AnimatePart(Transform part, Vector3 targetPos,
