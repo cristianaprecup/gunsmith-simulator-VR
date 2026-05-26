@@ -5,13 +5,15 @@ public class AssemblyManager : MonoBehaviour
 {
     public GunPart[] partsInOrder;
     public InstructionUI instructionUI;
-    private int currentStep = 0;
+    public GunStateManager gunStateManager;
 
+    private int currentStep = 0;
     public float transitionDelay = 2.5f;
 
     public void BeginChallenge()
     {
         currentStep = 0;
+        gunStateManager.SetDisassembledMode();
         DisassembleAll();
         instructionUI.ShowStep(partsInOrder[0].partName, 0, partsInOrder.Length);
         HighlightNextPart();
@@ -52,6 +54,8 @@ public class AssemblyManager : MonoBehaviour
 
         if (currentStep >= partsInOrder.Length)
         {
+            // All parts assembled — switch back to whole gun mode
+            gunStateManager.SetAssembledMode();
             instructionUI.ShowComplete();
             StartCoroutine(TransitionToShooting());
         }
@@ -83,6 +87,7 @@ public class AssemblyManager : MonoBehaviour
     public void ResetAll()
     {
         currentStep = 0;
+        gunStateManager.SetAssembledMode();
         foreach (GunPart part in partsInOrder)
             part.ClearOutline();
     }
