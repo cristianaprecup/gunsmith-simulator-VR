@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 0abb308d27287d24c8430daeffdc8e46, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -545,7 +545,7 @@ MonoBehaviour:
   - {fileID: 1415654336}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &41789240
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,7 +884,7 @@ MonoBehaviour:
   - {fileID: 1425968541}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &115454814 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4340123576018171165, guid: 59c13a230a415d444a87108b5edf6f3d, type: 3}
@@ -1087,7 +1087,7 @@ MonoBehaviour:
   - {fileID: 1932105043}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &147246880 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 882930026221760723, guid: 59c13a230a415d444a87108b5edf6f3d, type: 3}
@@ -1290,7 +1290,7 @@ MonoBehaviour:
   - {fileID: 1277637468}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &151605063 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 455788220107682974, guid: 59c13a230a415d444a87108b5edf6f3d, type: 3}
@@ -1493,7 +1493,7 @@ MonoBehaviour:
   - {fileID: 147246887}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1001 &151802472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1957,7 +1957,7 @@ MonoBehaviour:
   - {fileID: 359827344}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &173292429
 GameObject:
   m_ObjectHideFlags: 0
@@ -2297,7 +2297,7 @@ MonoBehaviour:
   - {fileID: 805321726}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &273832677 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2437056363737166043, guid: 59c13a230a415d444a87108b5edf6f3d, type: 3}
@@ -2500,7 +2500,7 @@ MonoBehaviour:
   - {fileID: 1173183736}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &280671973
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,7 +2901,7 @@ MonoBehaviour:
   - {fileID: 1126228140}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &374084451 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5329840344345586979, guid: 59c13a230a415d444a87108b5edf6f3d, type: 3}
@@ -3104,7 +3104,7 @@ MonoBehaviour:
   - {fileID: 513375847}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3443,7 +3443,7 @@ MonoBehaviour:
   - {fileID: 1704939271}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1001 &497911157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3773,7 +3773,7 @@ MonoBehaviour:
   - {fileID: 675918714}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &542813460 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -757656118724542590, guid: 59c13a230a415d444a87108b5edf6f3d, type: 3}
@@ -3976,7 +3976,7 @@ MonoBehaviour:
   - {fileID: 1510050389}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1001 &628618455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4272,7 +4272,7 @@ MonoBehaviour:
   - {fileID: 1727240794}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1001 &688869398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4532,7 +4532,7 @@ MonoBehaviour:
   - {fileID: 2044532753}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1001 &699844455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5914,7 +5914,7 @@ MonoBehaviour:
   - {fileID: 1425512492}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &802979058
 GameObject:
   m_ObjectHideFlags: 0
@@ -6210,7 +6210,7 @@ MonoBehaviour:
   - {fileID: 997201393}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &807500569
 GameObject:
   m_ObjectHideFlags: 0
@@ -6702,7 +6702,7 @@ MonoBehaviour:
   - {fileID: 1559332477}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1001 &923701732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7122,7 +7122,7 @@ MonoBehaviour:
   - {fileID: 115454821}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1001 &958705783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7386,7 +7386,7 @@ MonoBehaviour:
   - {fileID: 80507972}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &1015811272
 GameObject:
   m_ObjectHideFlags: 0
@@ -7891,7 +7891,7 @@ MonoBehaviour:
   - {fileID: 1441585057}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &1126228133 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5217349919293605706, guid: 59c13a230a415d444a87108b5edf6f3d, type: 3}
@@ -8094,7 +8094,7 @@ MonoBehaviour:
   - {fileID: 1378659722}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1001 &1154794719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8358,7 +8358,7 @@ MonoBehaviour:
   - {fileID: 542813467}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1001 &1223532663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8679,7 +8679,7 @@ MonoBehaviour:
   - {fileID: 2077282286}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &1378659715 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1660444730336218617, guid: 59c13a230a415d444a87108b5edf6f3d, type: 3}
@@ -8882,7 +8882,7 @@ MonoBehaviour:
   - {fileID: 151605070}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1001 &1408375036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9154,7 +9154,7 @@ MonoBehaviour:
   - {fileID: 1060683033}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &1425512485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4164540134740186909, guid: 59c13a230a415d444a87108b5edf6f3d, type: 3}
@@ -9357,7 +9357,7 @@ MonoBehaviour:
   - {fileID: 1729418541}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &1425968534 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9064243647225935422, guid: 59c13a230a415d444a87108b5edf6f3d, type: 3}
@@ -9560,7 +9560,7 @@ MonoBehaviour:
   - {fileID: 1703992196}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &1441585050 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8100643190921088231, guid: 59c13a230a415d444a87108b5edf6f3d, type: 3}
@@ -9763,7 +9763,7 @@ MonoBehaviour:
   - {fileID: 1941742083}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1001 &1450266224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10027,7 +10027,7 @@ MonoBehaviour:
   - {fileID: 2007212979}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &1510050382 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8952673547480151967, guid: 59c13a230a415d444a87108b5edf6f3d, type: 3}
@@ -10230,7 +10230,7 @@ MonoBehaviour:
   - {fileID: 1485207200}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1001 &1550214800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10490,7 +10490,7 @@ MonoBehaviour:
   - {fileID: 495830322}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &1584684384 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 59c13a230a415d444a87108b5edf6f3d, type: 3}
@@ -10960,7 +10960,7 @@ MonoBehaviour:
   prerequisites: []
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &1704939264 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6119086143208056993, guid: 59c13a230a415d444a87108b5edf6f3d, type: 3}
@@ -11163,7 +11163,7 @@ MonoBehaviour:
   - {fileID: 693107050}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!20 &1707484267 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 657184242118504724, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
@@ -11371,7 +11371,7 @@ MonoBehaviour:
   - {fileID: 273832684}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &1729418534 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5703412571369632200, guid: 59c13a230a415d444a87108b5edf6f3d, type: 3}
@@ -11574,7 +11574,7 @@ MonoBehaviour:
   - {fileID: 1899047808}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1001 &1745389723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11913,7 +11913,7 @@ MonoBehaviour:
   - {fileID: 374084458}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!64 &1895288947
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12294,7 +12294,7 @@ MonoBehaviour:
   - {fileID: 883889789}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1001 &1914792650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12618,7 +12618,7 @@ MonoBehaviour:
   - {fileID: 251380544}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &1935901662
 GameObject:
   m_ObjectHideFlags: 0
@@ -12896,7 +12896,7 @@ MonoBehaviour:
   - {fileID: 777875672}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1001 &1966300300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13572,7 +13572,7 @@ MonoBehaviour:
   - {fileID: 168443534}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1 &2047327761
 GameObject:
   m_ObjectHideFlags: 0
@@ -14035,7 +14035,7 @@ MonoBehaviour:
   - {fileID: 954258612}
   targetPosition: {x: 0, y: 0, z: 0}
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  snapRadius: 0.08
+  snapRadius: 0.1
 --- !u!1001 &2081095917
 PrefabInstance:
   m_ObjectHideFlags: 0

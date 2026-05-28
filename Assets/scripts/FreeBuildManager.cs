@@ -38,16 +38,36 @@ public class FreeBuildManager : MonoBehaviour
 
     void Update()
     {
-        if (isActive && currentlyGrabbedPart != null && currentStep > 0)
+        if (!isActive || currentlyGrabbedPart == null || currentStep <= 0) return;
+
+        float distance = Vector3.Distance(
+            currentlyGrabbedPart.transform.position,
+            currentlyGrabbedPart.targetPosition);
+
+        if (distance < currentlyGrabbedPart.snapRadius)
         {
-            if (currentlyGrabbedPart.IsNearTarget())
-            {
-                currentlyGrabbedPart.SetOutline("green");
-            }
-            else
-            {
-                currentlyGrabbedPart.SetOutline("yellow");
-            }
+            currentlyGrabbedPart.SetOutline("green");
+        }
+        else if (distance < currentlyGrabbedPart.snapRadius * 3f)
+        {
+            currentlyGrabbedPart.SetOutline("green");
+
+            float t = 1f - (distance / (currentlyGrabbedPart.snapRadius * 3f));
+            float strength = t * 0.15f;
+
+            currentlyGrabbedPart.transform.position = Vector3.Lerp(
+                currentlyGrabbedPart.transform.position,
+                currentlyGrabbedPart.targetPosition,
+                strength);
+
+            currentlyGrabbedPart.transform.rotation = Quaternion.Slerp(
+                currentlyGrabbedPart.transform.rotation,
+                currentlyGrabbedPart.targetRotation,
+                strength);
+        }
+        else
+        {
+            currentlyGrabbedPart.SetOutline("yellow");
         }
     }
 
@@ -182,7 +202,7 @@ public class FreeBuildManager : MonoBehaviour
             }
             else
             {
-                if (part.IsNearTarget())
+                if (Vector3.Distance(part.transform.position, part.targetPosition) < part.snapRadius * 3f)
                 {
                     part.SnapToTarget();
                     part.isAssembled = true;
