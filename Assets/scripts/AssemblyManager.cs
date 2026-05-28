@@ -3,13 +3,17 @@ using System.Collections;
 
 public class AssemblyManager : MonoBehaviour
 {
-    public GunPart[] partsInOrder; // drag all 43 parts here in correct order
+    public GunPart[] partsInOrder;
     public InstructionUI instructionUI;
+    public GunStateManager gunStateManager;
+
     private int currentStep = 0;
+    public float transitionDelay = 2.5f;
 
     public void BeginChallenge()
     {
         currentStep = 0;
+        gunStateManager.SetDisassembledMode();
         DisassembleAll();
         instructionUI.ShowStep(partsInOrder[0].partName, 0, partsInOrder.Length);
         HighlightNextPart();
@@ -20,7 +24,6 @@ public class AssemblyManager : MonoBehaviour
         foreach (GunPart part in partsInOrder)
         {
             part.isAssembled = false;
-            // move parts to table positions (set beforehand)
             part.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
@@ -29,7 +32,6 @@ public class AssemblyManager : MonoBehaviour
     {
         if (part == partsInOrder[currentStep])
         {
-            // Correct!
             part.SetOutline("green");
             part.GetComponent<Rigidbody>().isKinematic = true;
             part.isAssembled = true;
@@ -38,7 +40,6 @@ public class AssemblyManager : MonoBehaviour
         }
         else
         {
-            // Wrong!
             part.SetOutline("red");
             instructionUI.ShowWrong(partsInOrder[currentStep].partName);
             StartCoroutine(ClearWrongOutline(part));
@@ -53,7 +54,10 @@ public class AssemblyManager : MonoBehaviour
 
         if (currentStep >= partsInOrder.Length)
         {
+            // All parts assembled — switch back to whole gun mode
+            gunStateManager.SetAssembledMode();
             instructionUI.ShowComplete();
+            StartCoroutine(TransitionToShooting());
         }
         else
         {
@@ -61,6 +65,12 @@ public class AssemblyManager : MonoBehaviour
                                    currentStep, partsInOrder.Length);
             HighlightNextPart();
         }
+    }
+
+    IEnumerator TransitionToShooting()
+    {
+        yield return new WaitForSeconds(transitionDelay);
+        GameManager.Instance.StartShooting();
     }
 
     IEnumerator ClearWrongOutline(GunPart part)
@@ -77,6 +87,7 @@ public class AssemblyManager : MonoBehaviour
     public void ResetAll()
     {
         currentStep = 0;
+        gunStateManager.SetAssembledMode();
         foreach (GunPart part in partsInOrder)
             part.ClearOutline();
     }

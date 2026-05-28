@@ -3,11 +3,13 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public enum GameState { Idle, Tutorial, Challenge, FreeBuild }
+
+    public enum GameState { Idle, Tutorial, Challenge, Shooting, FreeBuild }
     public GameState currentState = GameState.Idle;
 
     public TutorialController tutorialController;
     public AssemblyManager assemblyManager;
+    public ShootingManager shootingManager;
     public FreeBuildManager freeBuildManager;
 
     void Awake() => Instance = this;
@@ -24,6 +26,12 @@ public class GameManager : MonoBehaviour
         assemblyManager.BeginChallenge();
     }
 
+    public void StartShooting()
+    {
+        currentState = GameState.Shooting;
+        shootingManager.BeginShootingPhase();
+    }
+
     public void StartFreeBuild()
     {
         currentState = GameState.FreeBuild;
@@ -37,5 +45,6 @@ public class GameManager : MonoBehaviour
 
         currentState = GameState.Idle;
         assemblyManager.ResetAll();
+        shootingManager.EndShootingPhase();
     }
 }
