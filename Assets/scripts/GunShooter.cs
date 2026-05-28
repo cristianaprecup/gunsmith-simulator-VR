@@ -19,7 +19,6 @@ public class GunShooter : MonoBehaviour
 
     private bool shootingEnabled = false;
     private float nextFireTime = 0f;
-
     private InputAction triggerAction;
 
     void Awake()
@@ -40,7 +39,6 @@ public class GunShooter : MonoBehaviour
     public void Enable()
     {
         shootingEnabled = true;
-        Debug.Log("GunShooter: Enabled.");
     }
 
     public void Disable()
@@ -54,10 +52,6 @@ public class GunShooter : MonoBehaviour
         if (Time.time < nextFireTime) return;
 
         float triggerValue = triggerAction.ReadValue<float>();
-
-        if (Time.frameCount % 60 == 0)
-            Debug.Log($"GunShooter: trigger = {triggerValue:F2}");
-
         if (triggerValue > 0.5f)
         {
             nextFireTime = Time.time + fireRate;
@@ -67,31 +61,24 @@ public class GunShooter : MonoBehaviour
 
     private void Fire()
     {
-        if (muzzlePoint == null)
-        {
-            Debug.LogWarning("GunShooter: muzzlePoint not assigned!");
-            return;
-        }
+        // Tell ShootingManager a shot was fired (for accuracy tracking)
+        ShootingManager sm = FindFirstObjectByType<ShootingManager>();
+        if (sm != null) sm.RegisterShot();
+
+        if (muzzlePoint == null) return;
 
         Ray ray = new Ray(muzzlePoint.position, muzzlePoint.forward);
-        Debug.Log("GunShooter: FIRED!");
 
         if (Physics.Raycast(ray, out RaycastHit hit, shootRange, shootableLayers))
         {
-            Debug.Log($"GunShooter: Hit {hit.collider.gameObject.name}");
             ShootingTarget target = hit.collider.GetComponent<ShootingTarget>();
             if (target == null) target = hit.collider.GetComponentInParent<ShootingTarget>();
             if (target != null) target.OnHit();
-            else Debug.Log("GunShooter: No ShootingTarget on hit object.");
-        }
-        else
-        {
-            Debug.Log("GunShooter: Raycast hit nothing.");
         }
 
         PlayMuzzleFlash();
         PlaySound();
-        Debug.DrawRay(ray.origin, ray.direction * shootRange, Color.yellow, 0.5f);
+        Debug.DrawRay(ray.origin, ray.direction * shootRange, Color.yellow, 0.15f);
     }
 
     private void PlayMuzzleFlash()

@@ -1,18 +1,28 @@
 using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Attach to every target. Flashes red on hit, spawns a floating score popup,
+/// and reports points to ShootingManager.
+/// </summary>
 public class ShootingTarget : MonoBehaviour
 {
+    [Header("Points")]
+    public int pointValue = 1;           // Override per target (small=3, medium=2, large=1)
+
     [Header("Feedback")]
     public Color flashColor = Color.red;
     public float flashDuration = 0.15f;
     public float resetDelay = 1.0f;
 
+    [Header("Popup")]
+    public GameObject hitPopupPrefab;    // Drag your HitPopup prefab here
+    public Color popupColor = Color.yellow;
+
     [Header("Optional Audio")]
     public AudioSource audioSource;
     public AudioClip hitSound;
 
-    // Internal state
     private Renderer[] renderers;
     private Color[] originalColors;
     private bool isHit = false;
@@ -30,8 +40,22 @@ public class ShootingTarget : MonoBehaviour
         if (isHit) return;
         isHit = true;
 
-        ShootingManager sm = FindObjectOfType<ShootingManager>();
-        if (sm != null) sm.RegisterHit();
+        // Report hit with point value
+        ShootingManager sm = FindFirstObjectByType<ShootingManager>();
+        if (sm != null) sm.RegisterHit(pointValue);
+
+        // Spawn floating popup above the target
+        if (hitPopupPrefab != null)
+        {
+            Vector3 popupPos = transform.position + Vector3.up * 0.5f;
+            GameObject popup = Instantiate(hitPopupPrefab, popupPos, Quaternion.identity);
+            HitPopup hp = popup.GetComponent<HitPopup>();
+            if (hp != null)
+            {
+                string text = pointValue > 1 ? $"+{pointValue}!" : $"+{pointValue}";
+                hp.SetText(text, popupColor);
+            }
+        }
 
         if (audioSource != null && hitSound != null)
             audioSource.PlayOneShot(hitSound);
@@ -43,17 +67,14 @@ public class ShootingTarget : MonoBehaviour
     {
         SetColor(flashColor);
         yield return new WaitForSeconds(flashDuration);
-
         RestoreColors();
-
         yield return new WaitForSeconds(resetDelay - flashDuration);
         isHit = false;
     }
 
     void SetColor(Color c)
     {
-        foreach (Renderer r in renderers)
-            r.material.color = c;
+        foreach (Renderer r in renderers) r.material.color = c;
     }
 
     void RestoreColors()
