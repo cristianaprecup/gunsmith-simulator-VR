@@ -6,6 +6,7 @@ public class TutorialController : MonoBehaviour
     public InstructionUI instructionUI;
     public float stepDelay = 2.5f;
     public Transform tableCenter;
+    public GameObject skipButton;
 
     private AssemblyManager assemblyManager;
     private GunPart[] parts;
@@ -19,6 +20,8 @@ public class TutorialController : MonoBehaviour
 
     public void BeginTutorial()
     {
+        if (skipButton != null) skipButton.SetActive(true);
+
         parts = assemblyManager.partsInOrder;
 
         originalPositions = new Vector3[parts.Length];
@@ -83,6 +86,8 @@ public class TutorialController : MonoBehaviour
             yield return new WaitForSeconds(stepDelay - 0.8f);
         }
 
+        if (skipButton != null) skipButton.SetActive(false);
+        
         instructionUI.ShowComplete();
         yield return new WaitForSeconds(2.5f);
         GameManager.Instance.StartShooting();
@@ -133,5 +138,14 @@ public class TutorialController : MonoBehaviour
             center.x + x,
             center.y + 0.05f,
             center.z + z);
+    }
+
+    public void SkipTutorial()
+    {
+        if (skipButton != null) skipButton.SetActive(false);
+
+        StopAllCoroutines();
+        instructionUI.ShowComplete();
+        GameManager.Instance.StartShooting();
     }
 }

@@ -10,6 +10,7 @@ public class FreeBuildManager : MonoBehaviour
     public GameObject instructionsPanel;
     public TextMeshProUGUI stepText;
     public Transform tableCenter;
+    public GunStateManager gunStateManager;
 
     [Header("Settings")]
     public float snapCheckInterval = 0.1f;
@@ -73,6 +74,8 @@ public class FreeBuildManager : MonoBehaviour
 
     public void BeginFreeBuild()
     {
+        gunStateManager.SetFreeBuildMode();
+
         DestroyGhost();
         currentStep = 0;
         currentlyGrabbedPart = null;

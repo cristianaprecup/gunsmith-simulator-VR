@@ -41,4 +41,16 @@ public class GunStateManager : MonoBehaviour
                 grab.enabled = true;
         }
     }
+
+    // Call this for Free Build — parts individually grabbable, no root grab
+    public void SetFreeBuildMode()
+    {
+        rootGrab.enabled = false;
+
+        foreach (UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grab in partGrabs)
+        {
+            if (grab != rootGrab)
+                grab.enabled = true;
+        }
+    }
 }
